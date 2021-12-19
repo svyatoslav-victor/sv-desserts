@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/sv-desserts/static/css/main.bb6aa026.css",
-    "main.js": "/sv-desserts/static/js/main.bfa9c9e1.js",
+    "main.css": "/sv-desserts/static/css/main.99c6b6d6.css",
+    "main.js": "/sv-desserts/static/js/main.a7e078f2.js",
     "static/js/787.c6a9aefb.chunk.js": "/sv-desserts/static/js/787.c6a9aefb.chunk.js",
     "static/media/ig-bw.png": "/sv-desserts/static/media/ig-bw.3e87baff890d598f1863.png",
     "static/media/phone.png": "/sv-desserts/static/media/phone.9390779e0205937ec9ce.png",
     "index.html": "/sv-desserts/index.html",
-    "main.bb6aa026.css.map": "/sv-desserts/static/css/main.bb6aa026.css.map",
-    "main.bfa9c9e1.js.map": "/sv-desserts/static/js/main.bfa9c9e1.js.map",
+    "main.99c6b6d6.css.map": "/sv-desserts/static/css/main.99c6b6d6.css.map",
+    "main.a7e078f2.js.map": "/sv-desserts/static/js/main.a7e078f2.js.map",
     "787.c6a9aefb.chunk.js.map": "/sv-desserts/static/js/787.c6a9aefb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bb6aa026.css",
-    "static/js/main.bfa9c9e1.js"
+    "static/css/main.99c6b6d6.css",
+    "static/js/main.a7e078f2.js"
   ]
 }
