@@ -14,8 +14,8 @@ export const App: React.FC = () => {
           SV DESSERTS
         </div>
         <div className='App_Header__contacts'>
-          <form
-            action="tel:380633638593"
+          <a
+            href="tel:380633638593"
           >
             <div
               className='phone_number'
@@ -33,7 +33,7 @@ export const App: React.FC = () => {
             >
               <img src={phone} width='35px' height='35px' alt="phone" />
             </button>
-          </form>
+          </a>
           <div className='insta'>
             <a
               className='insta__link'
