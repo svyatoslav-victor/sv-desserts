@@ -24,19 +24,58 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
+    font-size: 3rem;
     text-decoration: underline;
   }
 
   &__contacts {
     display: flex;
     flex-direction: row;
+    position: relative;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 0.8rem;
   }
+}
+
+.phone_number {
+  position: absolute;
+  top: 70%;
+  right: 18%;
+  font-weight: bold;
+}
+
+.phone_icon {
+  border: none;
+  width: 35px;
+  height: 35px;
+  background-color: antiquewhite;
+  cursor: pointer;
 }
 
 .App_Main {
   border-bottom: 2px dashed black;
+}
+
+@media screen and(max-width: 900px) {
+  .phone_number {
+    position: absolute;
+    top: 70%;
+    right: 18%;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+}
+
+@media screen and(max-width: 700px) {
+  .App_Header__logo {
+    font-size: 2rem;
+  }
+
+  .phone_number {
+    position: absolute;
+    top: 75%;
+    right: 18%;
+    font-size: 0.5rem;
+    font-weight: bold;
+  }
 }
