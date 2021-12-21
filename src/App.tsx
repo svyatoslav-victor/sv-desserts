@@ -3,9 +3,19 @@ import logo from './images/ig-bw.png';
 import phone from './images/phone.png';
 import './App.scss';
 import { Main } from './components/Main/Main';
+import { Navigation } from './components/Navigation/Navigation';
 
 export const App: React.FC = () => {
   const [numberVisibility, setNumberVisibility] = useState<boolean>(false);
+  const navbar = [
+    { link: './nav_bar/reviews.jpg', name: 'REVIEWS' },
+    { link: './nav_bar/easter.jpg', name: 'EASTER' },
+    { link: './nav_bar/prices.jpg', name: 'PRICES' },
+    { link: './nav_bar/cakes.jpg', name: 'CAKES' },
+    { link: './nav_bar/process.jpg', name: 'PROCESS' },
+    { link: './nav_bar/marshmellow.jpg', name: 'MARSHMELLOW' },
+    { link: './nav_bar/schtollen.jpg', name: 'SCHTOLLEN' }
+  ];
 
   return (
     <div className="App_Wrapper">
@@ -24,14 +34,17 @@ export const App: React.FC = () => {
               +38 093 363 85 93
             </div>
             <button
-              className='phone_icon'
+              className='phone_button'
               type='submit'
               onMouseEnter={() => setNumberVisibility(true)}
               onMouseLeave={() => setNumberVisibility(false)}
               onTouchStart={() => setNumberVisibility(true)}
               onTouchEnd={() => setNumberVisibility(false)}
             >
-              <img src={phone} width='35px' height='35px' alt="phone" />
+              <img
+                className='phone_icon'
+                src={phone}
+                alt="phone" />
             </button>
           </a>
           <div className='insta'>
@@ -48,7 +61,7 @@ export const App: React.FC = () => {
         <Main />
       </main>
       <nav className='App_Navigation'>
-        <p>LINKS WILL GO HERE</p>
+        <Navigation nav={navbar} />
       </nav>
     </div>
   );

@@ -54,9 +54,12 @@ body {
 }
 
 .phone_icon {
-  border: none;
   width: 35px;
   height: 35px;
+}
+
+.phone_button {
+  border: none;
   background-color: antiquewhite;
   cursor: pointer;
 }
@@ -67,6 +70,7 @@ body {
 
 a:active {
   @include no-touch-select;
+  outline: none;
 }
 
 .App_Main {
@@ -99,4 +103,8 @@ a:active {
     font-size: 0.5rem;
     font-weight: bold;
   }
+}
+
+.App_Navigation {
+  display: flex;
 }
