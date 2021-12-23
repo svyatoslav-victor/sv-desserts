@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Navigation.scss';
 
 interface Nav {
@@ -8,9 +8,10 @@ interface Nav {
 
 type Props = {
   nav: Nav[];
+  onClick: () => void;
 };
 
-export const Navigation: React.FC<Props> = ({ nav }) => {
+export const Navigation: React.FC<Props> = ({ nav, onClick }) => {
   const [linkName, setLinkName] = useState<string>('');
 
   return (
@@ -28,6 +29,7 @@ export const Navigation: React.FC<Props> = ({ nav }) => {
               onTouchStart={(event) => setLinkName(event.currentTarget.name)}
               onMouseOut={() => setLinkName('')}
               onTouchEnd={() => setLinkName('')}
+              onClick={onClick}
             >
               <img
                 className='Navigation__List--Image'

@@ -8,14 +8,20 @@ import { Navigation } from './components/Navigation/Navigation';
 export const App: React.FC = () => {
   const [numberVisibility, setNumberVisibility] = useState<boolean>(false);
   const navbar = [
-    { link: './nav_bar/reviews.jpg', name: 'REVIEWS' },
-    { link: './nav_bar/easter.jpg', name: 'EASTER' },
-    { link: './nav_bar/prices.jpg', name: 'PRICES' },
-    { link: './nav_bar/cakes.jpg', name: 'CAKES' },
-    { link: './nav_bar/process.jpg', name: 'PROCESS' },
-    { link: './nav_bar/marshmellow.jpg', name: 'MARSHMELLOW' },
-    { link: './nav_bar/schtollen.jpg', name: 'SCHTOLLEN' }
+    { link: require('./images/nav_bar/reviews.jpg'), name: 'REVIEWS' },
+    { link: require('./images/nav_bar/easter.jpg'), name: 'EASTER' },
+    { link: require('./images/nav_bar/prices.jpg'), name: 'PRICES' },
+    { link: require('./images/nav_bar/cakes.jpg'), name: 'CAKES' },
+    { link: require('./images/nav_bar/process.jpg'), name: 'PROCESS' },
+    { link: require('./images/nav_bar/marshmellow.jpg'), name: 'MARSHMELLOW' },
+    { link: require('./images/nav_bar/schtollen.jpg'), name: 'SCHTOLLEN' }
   ];
+
+  const handleClick = () => {
+    return (
+      <img src={navbar[0].link} alt="" />
+    )
+  };
 
   return (
     <div className="App_Wrapper">
@@ -61,7 +67,7 @@ export const App: React.FC = () => {
         <Main />
       </main>
       <nav className='App_Navigation'>
-        <Navigation nav={navbar} />
+        <Navigation nav={navbar} onClick={handleClick}/>
       </nav>
     </div>
   );
