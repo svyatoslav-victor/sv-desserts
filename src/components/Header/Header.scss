@@ -1,0 +1,86 @@
+@mixin no-touch-select {
+	-webkit-touch-callout:none; /* prevent callout to copy image, etc when tap to hold */
+	-webkit-text-size-adjust:none; /* prevent webkit from resizing text to fit */
+	-webkit-tap-highlight-color:rgba(0,0,0,0); /* prevent tap highlight color*/
+	-webkit-tap-highlight-color:transparent; /* prevent tap highlight color*/
+	-webkit-user-select:none;  /* prevent copy paste, to allow, change 'none' to 'text' */
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px 0;
+
+  .linkToHome {
+    height: 70px;
+    padding: 10px;
+  }
+
+  .sonyaLogo {
+    height: 70px;
+    border-radius: 50%;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 3.3rem;
+    font-weight: 100;
+    padding: 0 40px;
+
+    ::after {
+      content: "";
+      width: calc(100% - 131px);
+      position: absolute;
+      top: 105px;
+      left: 130px;
+      border: 1px solid rgb(92, 92, 92);
+      background-color: rgb(92, 92, 92);
+    }
+  }
+
+  &__contacts {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 20px;
+    position: relative;
+    justify-content: end;
+    align-items: center;
+    margin: 0 40px;
+  }
+}
+
+a {
+  .phone_number {
+    position: absolute;
+    opacity: 0;
+    top: 70%;
+    right: 40px;
+    color: black;
+    font-size: 12px;
+    font-weight: 400;
+    transition: opacity 1s ease-in-out;
+  }
+
+  &:hover {
+    .phone_number {
+      opacity: 1;
+    }
+  }
+}
+
+
+.phone_icon {
+  width: 35px;
+  height: 35px;
+}
+
+.insta_link {
+  cursor: pointer;
+}
+
+a:active {
+  @include no-touch-select;
+  outline: none;
+}
