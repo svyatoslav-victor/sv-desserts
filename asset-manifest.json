@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/sv-desserts/static/css/main.4e862b34.css",
-    "main.js": "/sv-desserts/static/js/main.1228fdfa.js",
+    "main.css": "/sv-desserts/static/css/main.0f05ef2c.css",
+    "main.js": "/sv-desserts/static/js/main.6f0e1010.js",
     "static/js/787.c6a9aefb.chunk.js": "/sv-desserts/static/js/787.c6a9aefb.chunk.js",
-    "static/media/3.jpg": "/sv-desserts/static/media/3.9d25e1199c18fb1ede78.jpg",
-    "static/media/1.jpg": "/sv-desserts/static/media/1.f427005cf40bed464d34.jpg",
-    "static/media/2.jpg": "/sv-desserts/static/media/2.ebe81be3bb80e3004133.jpg",
+    "static/media/christmas.jpg": "/sv-desserts/static/media/christmas.5c23d23a3640a8eb7912.jpg",
+    "static/media/main_theme.jpg": "/sv-desserts/static/media/main_theme.e7bcc318ccdbca9bd777.jpg",
+    "static/media/easter_eggs.jpg": "/sv-desserts/static/media/easter_eggs.9d3174a65ab530e28eef.jpg",
     "static/media/ig-bw.png": "/sv-desserts/static/media/ig-bw.3e87baff890d598f1863.png",
     "static/media/phone.png": "/sv-desserts/static/media/phone.9390779e0205937ec9ce.png",
     "index.html": "/sv-desserts/index.html",
-    "main.4e862b34.css.map": "/sv-desserts/static/css/main.4e862b34.css.map",
-    "main.1228fdfa.js.map": "/sv-desserts/static/js/main.1228fdfa.js.map",
+    "main.0f05ef2c.css.map": "/sv-desserts/static/css/main.0f05ef2c.css.map",
+    "main.6f0e1010.js.map": "/sv-desserts/static/js/main.6f0e1010.js.map",
     "787.c6a9aefb.chunk.js.map": "/sv-desserts/static/js/787.c6a9aefb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4e862b34.css",
-    "static/js/main.1228fdfa.js"
+    "static/css/main.0f05ef2c.css",
+    "static/js/main.6f0e1010.js"
   ]
 }
