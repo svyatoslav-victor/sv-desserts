@@ -25,10 +25,6 @@ export const Navigation: React.FC<Props> = ({ nav, onClick }) => {
               type='button'
               name={item.name}
               className='Navigation__List--Link'
-              onMouseOver={(event) => setLinkName(event.currentTarget.name)}
-              onTouchStart={(event) => setLinkName(event.currentTarget.name)}
-              onMouseOut={() => setLinkName('')}
-              onTouchEnd={() => setLinkName('')}
               onClick={onClick}
             >
               <img

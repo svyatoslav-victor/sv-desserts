@@ -12,6 +12,40 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow: overlay;
+  box-sizing: border-box;
+}
+
+.scrollToTop {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+  z-index: 3;
+  transform: rotate(270deg);
+  top: 83vh;
+
+  &__button {
+    height: 60px;
+    width: 60px;
+    background-color: rgba(112, 112, 112, 0.171);
+    border: none;
+    border-radius: 20px;
+    transition: background-color 1s ease-in-out;
+    cursor: pointer;
+    transition: opacity 1s ease-in-out;
+
+    &:hover {
+      font-weight: bold;
+      background-color: rgba(112, 112, 112, 0.418);
+      transition: background-color 1s ease-in-out;
+    }
+
+    &:active {
+      background-color: darkorange;
+      transition: background-color 0.5s ease-in-out;
+    }
+  }
 }
 
 .wrapper {
@@ -23,15 +57,29 @@ body {
 .content {
   position: relative;
   z-index: 1;
-  margin-top: 70px;
+  margin: 50px 0 20px;
   display: grid;
   grid-auto-flow: row;
+  row-gap: 50px;
   min-width: 320px;
   max-width: 1024px;
   grid-template-columns: minmax(320px, 1024px);
   grid-template-rows: minmax(min-content, max-content);
   background-color: antiquewhite;
   border-radius: 20px;
+  border: solid 5px transparent;
+  background-image: linear-gradient(antiquewhite, antiquewhite), 
+                    linear-gradient(10deg, darkorange, transparent, transparent, transparent, black);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  opacity: 0;
+  animation: wait 3s ease-in-out forwards;
+
+  @keyframes wait {
+    100% {
+      opacity: 1;
+    }
+  }
 }
 
 // .App_Wrapper {

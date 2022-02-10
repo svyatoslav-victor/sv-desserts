@@ -10,6 +10,16 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 20px 0;
+  position: sticky;
+  top: 0;
+  background-color: antiquewhite;
+  border-radius: 20px;
+  z-index: 2;
+
+  .name {
+    margin: 0;
+    padding: 0;
+  }
 
   .linkToHome {
     height: 70px;
@@ -29,12 +39,22 @@
     font-weight: 100;
     padding: 0 40px;
 
+    ::before {
+      content: "........................";
+      font-weight: 100;
+      position: absolute;
+      top: 50px;
+      left: 130px;
+      color: rgb(92, 92, 92);
+      cursor: default;
+    }
+
     ::after {
       content: "";
-      width: calc(100% - 131px);
+      width: calc(100% - 279px);
       position: absolute;
       top: 105px;
-      left: 130px;
+      left: 278px;
       border: 1px solid rgb(92, 92, 92);
       background-color: rgb(92, 92, 92);
     }
@@ -52,11 +72,13 @@
 }
 
 a {
+  text-decoration: none;
+
   .phone_number {
     position: absolute;
     opacity: 0;
     top: 70%;
-    right: 40px;
+    right: 0;
     color: black;
     font-size: 12px;
     font-weight: 400;

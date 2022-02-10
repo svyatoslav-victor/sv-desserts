@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { Background } from './components/Background/Background';
 import { Header } from './components/Header/Header';
+import { Home } from './components/Home/Home';
 import { Main } from './components/Main/Main';
 import { Navigation } from './components/Navigation/Navigation';
 
@@ -17,6 +19,27 @@ export const App: React.FC = () => {
     { link: './images/nav_bar/schtollen.jpg', name: 'SCHTOLLEN' }
   ];
 
+  const [isVisible, setIsVisible] = useState(false);
+
+  const trackScroll = () => {
+    let heightToShowButton = 250;
+    const windowScroll = document.body.scrollTop ||
+      document.documentElement.scrollTop;
+
+    if (windowScroll > heightToShowButton) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', trackScroll);
+    return () => {
+      window.removeEventListener('scroll', trackScroll);
+    }
+  }, []);
+
   // const handleClick = () => {
   //   return (
   //     <img src={navbar[0].link} alt="" />
@@ -28,9 +51,34 @@ export const App: React.FC = () => {
       <Background />
 
       <div className="content">
+        <div className="scrollToTop">
+          <button
+            className="scrollToTop__button"
+            style={{
+              opacity: !isVisible ? 0 : 1,
+            }}
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+              });
+            }}
+          >
+            <span>&#x276F;&#x276F;&#x276F;</span>
+          </button>
+        </div>
+
         <Header />
-        <nav className="nav"></nav>
-        <main className="main"></main>
+        <div className="navigation">
+
+        </div>
+
+        <div className="main">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/sv-desserts" element={<Home />} />
+          </Routes>
+        </div>
       </div>
 
       <footer className="footer"></footer>

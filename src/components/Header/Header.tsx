@@ -11,7 +11,7 @@ export const Header = () => {
         <a className='linkToHome' href="./">
           <img className='sonyaLogo' src={sonyaLogo} alt="logo_img" />
         </a>
-        sv_desserts
+        <p className="name">sv_desserts</p>
       </div>
 
       <div className='header__contacts'>
