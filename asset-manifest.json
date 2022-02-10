@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/sv-desserts/static/css/main.898bfe1c.css",
-    "main.js": "/sv-desserts/static/js/main.6f0e1010.js",
+    "main.css": "/sv-desserts/static/css/main.07987b54.css",
+    "main.js": "/sv-desserts/static/js/main.7a913402.js",
     "static/js/787.c6a9aefb.chunk.js": "/sv-desserts/static/js/787.c6a9aefb.chunk.js",
     "static/media/christmas.jpg": "/sv-desserts/static/media/christmas.5c23d23a3640a8eb7912.jpg",
     "static/media/main_theme.jpg": "/sv-desserts/static/media/main_theme.e7bcc318ccdbca9bd777.jpg",
@@ -9,12 +9,12 @@
     "static/media/ig-bw.png": "/sv-desserts/static/media/ig-bw.3e87baff890d598f1863.png",
     "static/media/phone.png": "/sv-desserts/static/media/phone.9390779e0205937ec9ce.png",
     "index.html": "/sv-desserts/index.html",
-    "main.898bfe1c.css.map": "/sv-desserts/static/css/main.898bfe1c.css.map",
-    "main.6f0e1010.js.map": "/sv-desserts/static/js/main.6f0e1010.js.map",
+    "main.07987b54.css.map": "/sv-desserts/static/css/main.07987b54.css.map",
+    "main.7a913402.js.map": "/sv-desserts/static/js/main.7a913402.js.map",
     "787.c6a9aefb.chunk.js.map": "/sv-desserts/static/js/787.c6a9aefb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.898bfe1c.css",
-    "static/js/main.6f0e1010.js"
+    "static/css/main.07987b54.css",
+    "static/js/main.7a913402.js"
   ]
 }
