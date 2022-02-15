@@ -9,10 +9,12 @@
 .header {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 20px 0;
+  padding: 15px 0;
   position: sticky;
-  top: 0;
-  background-color: antiquewhite;
+  // top: 0; - OLD
+  // background-color: antiquewhite; - OLD
+  top: -17px;
+  background: linear-gradient(darkorange, antiquewhite);
   border-radius: 20px;
   z-index: 2;
 
@@ -22,12 +24,12 @@
   }
 
   .linkToHome {
-    height: 70px;
+    height: 90px;
     padding: 10px;
   }
 
   .sonyaLogo {
-    height: 70px;
+    height: 90px;
     border-radius: 50%;
   }
 
@@ -43,7 +45,7 @@
       content: "........................";
       font-weight: 100;
       position: absolute;
-      top: 50px;
+      top: 65px;
       left: 130px;
       color: rgb(92, 92, 92);
       cursor: default;
@@ -53,7 +55,7 @@
       content: "";
       width: calc(100% - 279px);
       position: absolute;
-      top: 105px;
+      top: 120px;
       left: 278px;
       border: 1px solid rgb(92, 92, 92);
       background-color: rgb(92, 92, 92);
@@ -75,6 +77,7 @@ a {
   text-decoration: none;
 
   .phone_number {
+    font-family: 'Montserrat', sans-serif;
     position: absolute;
     opacity: 0;
     top: 70%;

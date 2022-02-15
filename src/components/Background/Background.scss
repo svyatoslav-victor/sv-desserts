@@ -6,12 +6,13 @@
   background-position: center;
   position: fixed;
   z-index: -1;
-  opacity: 0;
-  animation: show 0.5s ease-in-out forwards;
+  mask-image: linear-gradient(to bottom, black 25%, transparent 55%);
+  // opacity: 0;
+  // animation: show 0.5s ease-in-out forwards;
 
-  @keyframes show {
-    100% {
-      opacity: 1;
-    }
-  }
+  // @keyframes show {
+  //   100% {
+  //     opacity: 1;
+  //   }
+  // }
 }

@@ -1,13 +1,13 @@
 import React from 'react';
-import { home } from '../../libs/home/home';
+import { reviews } from '../../libs/navigation/reviews';
 
-import './Home.scss';
+import '../Home/Home.scss';
 
-export const Home: React.FC = () => {
+export const Reviews: React.FC = () => {
   return (
       <div className="home">
         <div className="home__wrapper">
-        {home.map((element, index) => (
+        {reviews.map((element, index) => (
           <div
             key={index}
             className="home__image"

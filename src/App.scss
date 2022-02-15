@@ -12,36 +12,35 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow: overlay;
-  box-sizing: border-box;
+  background: antiquewhite;
 }
 
 .scrollToTop {
   position: fixed;
   display: flex;
   align-items: center;
-  height: 80px;
-  width: 80px;
+  height: 160vh;
+  width: 20px;
   z-index: 3;
-  transform: rotate(270deg);
-  top: 83vh;
 
   &__button {
-    height: 60px;
-    width: 60px;
-    background-color: rgba(112, 112, 112, 0.171);
+    height: 200vh;
+    width: 20px;
+    font-size: 26px;
+    padding: 0 2px;
+    background-color: rgba(112, 112, 112, 0.082);
     border: none;
-    border-radius: 20px;
     transition: background-color 1s ease-in-out;
     cursor: pointer;
     transition: opacity 1s ease-in-out;
 
     &:hover {
-      font-weight: bold;
       background-color: rgba(112, 112, 112, 0.418);
       transition: background-color 1s ease-in-out;
     }
 
     &:active {
+      font-weight: bold;
       background-color: darkorange;
       transition: background-color 0.5s ease-in-out;
     }
@@ -60,109 +59,47 @@ body {
   margin: 50px 0 20px;
   display: grid;
   grid-auto-flow: row;
-  row-gap: 50px;
+  row-gap: 20px;
   min-width: 320px;
   max-width: 1024px;
-  grid-template-columns: minmax(320px, 1024px);
+  grid-template-columns: minmax(320px, 900px);
   grid-template-rows: minmax(min-content, max-content);
-  background-color: antiquewhite;
+  background: linear-gradient(darkorange 5%, antiquewhite 5%);
   border-radius: 20px;
-  border: solid 5px transparent;
-  background-image: linear-gradient(antiquewhite, antiquewhite), 
-                    linear-gradient(10deg, darkorange, transparent, transparent, transparent, black);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  opacity: 0;
-  animation: wait 3s ease-in-out forwards;
+  
+  // GRADIENT BORDER RULES:
+  // border: solid 5px transparent;
+  // background-image: linear-gradient(antiquewhite, antiquewhite), 
+  //                   linear-gradient(10deg, darkorange, transparent, transparent, transparent, black);
+  // background-origin: border-box;
+  // background-clip: content-box, border-box;
 
-  @keyframes wait {
-    100% {
-      opacity: 1;
-    }
-  }
+  // opacity: 0;
+  // animation: wait 3s ease-in-out forwards;
+
+  // @keyframes wait {
+  //   100% {
+  //     opacity: 1;
+  //   }
+  // }
 }
 
-// .App_Wrapper {
-//   display: grid;
-//   height: 100vh;
-//   width: 100vw;
-//   grid-template-rows: 1.5fr 8fr 2fr;
-//   grid-auto-columns: minmax(100vw, auto);
-// }
+.main {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 300px;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(112, 112, 112);
+  }
 
-// .App_Header {
-//   display: grid;
-//   width: 100vw;
-//   grid-template-columns: 60vw 40vw;
-//   border-bottom: 2px dashed black;
-
-//   .linkToHome {
-//     height: 70px;
-//     padding: 10px;
-//   }
-
-//   .sonyaLogo {
-//     height: 70px;
-//     border-radius: 50%;
-//   }
-
-//   &__logo {
-//     display: flex;
-//     justify-content: start;
-//     align-items: center;
-//     font-size: 3.3rem;
-//     font-weight: 100;
-//     padding: 0 40px;
-
-//     ::after {
-//       content: "";
-//       width: 1030px;
-//       position: absolute;
-//       top: 75px;
-//       left: 130px;
-//       border: 1px solid rgb(92, 92, 92);
-//     }
-//   }
-
-//   &__contacts {
-//     display: grid;
-//     grid-auto-flow: column;
-//     column-gap: 20px;
-//     position: relative;
-//     justify-content: end;
-//     align-items: center;
-//     padding: 0 40px;
-//   }
-// }
-
-// .phone_number {
-//   position: absolute;
-//   top: 38%;
-//   right: 30%;
-//   color: black;
-//   font-size: 12px;
-//   font-weight: 400;
-// }
-
-// .phone_icon {
-//   width: 35px;
-//   height: 35px;
-// }
-
-// .insta_link {
-//   cursor: pointer;
-// }
-
-// a:active {
-//   @include no-touch-select;
-//   outline: none;
-// }
-
-// .App_Main {
-//   max-height: 70vh;
-//   border-bottom: 2px dashed black;
-// }
-
-// .App_Navigation {
-//   display: flex;
-// }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 305px;
+    width: 100%;
+    height: 1px;
+    background-color: darkorange;
+  }
+}

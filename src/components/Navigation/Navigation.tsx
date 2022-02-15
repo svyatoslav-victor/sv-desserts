@@ -1,49 +1,115 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import './Navigation.scss';
 
 interface Nav {
   link: string,
   name: string,
+  title: string,
 }
 
 type Props = {
-  nav: Nav[];
-  onClick: () => void;
+  navigation: Nav[];
 };
 
-export const Navigation: React.FC<Props> = ({ nav, onClick }) => {
-  const [linkName, setLinkName] = useState<string>('');
+export const Navigation: React.FC<Props> = ({ navigation }) => {
+  const [backVisible, isBackVisible] = useState<boolean>();
+  const [forwardVisible, isForwardVisible] = useState<boolean>();
+
+  const navList = document.querySelector('ul');
+
+  useEffect(() => {
+    isBackVisible(false);
+    isForwardVisible(true);
+  }, [navigation]);
+
+  const toStart = () => {
+    navList?.scrollTo({
+      left: 0,
+      behavior: 'smooth',
+    });
+    isBackVisible(false);
+    isForwardVisible(true);
+  };
+
+  const toEnd = () => {
+    navList?.scrollTo({
+      left: 910,
+      behavior: 'smooth',
+    });
+    isBackVisible(true);
+    isForwardVisible(false);
+  };
+
+  const trackScroll = () => {
+    if (navList && navList?.scrollLeft === 0) {
+      isBackVisible(false);
+      isForwardVisible(true);
+    } 
+    
+    if (navList && (navList.scrollLeft > 0
+        && navList.scrollLeft < (navList.scrollWidth - navList.clientWidth))) {
+      isBackVisible(true);
+      isForwardVisible(true);
+    }
+    if (navList && navList.scrollLeft >= (navList.scrollWidth - navList.clientWidth)) {
+      isForwardVisible(false);
+    }
+  };
 
   return (
-      <ul className='Navigation__List'>
-        {nav.map((item, index) => (
+    <div className="navigation">
+      <button
+        className="scroll"
+        onClick={toStart}
+        style={{
+          visibility: backVisible ? 'visible' : 'collapse',
+        }}
+      >
+        &#8920;
+      </button>
+      <ul
+        className='navigation__list'
+        onScroll={trackScroll}
+      >
+        {navigation.map((item, index) => (
           <li
-            className='Navigation__List--Item'
+            className='navigation__list--item'
             key={index}
           >
-            <button
-              type='button'
-              name={item.name}
-              className='Navigation__List--Link'
-              onClick={onClick}
+            <NavLink
+              to={`/${item.name}`}
+              className='navigation__list--link'
             >
-              <img
-                className='Navigation__List--Image'
-                src={item.link}
-                alt={item.name}
-              />
-              <p
-                className='Navigation__List--Name'
-                style={linkName === item.name
-                  ? {visibility: 'visible'}
-                  : {visibility: 'collapse'}
-                }
+              <button
+                type='button'
+                name={item.name}
+                className='navigation__list--button'
               >
-                {item.name}
-              </p>
-            </button>
+                <img
+                  className='navigation__list--image'
+                  src={item.link}
+                  alt={item.name}
+                />
+                <p
+                  className='navigation__list--name'
+                >
+                  {item.title}
+                </p>
+              </button>
+            </NavLink>
           </li>
         ))}
       </ul>
+      <button
+        className="scroll"
+        onClick={toEnd}
+        style={{
+          visibility: forwardVisible ? 'visible' : 'collapse',
+        }}
+      >
+        &#8921;
+      </button>
+    </div>
   );
 };
