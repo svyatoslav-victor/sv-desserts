@@ -9,10 +9,11 @@ interface Nav {
 }
 
 type Props = {
-  navigation: Nav[];
+  navigation: Nav[],
+  pickLink: (event: React.MouseEvent) => void,
 };
 
-export const Navigation: React.FC<Props> = ({ navigation }) => {
+export const Navigation: React.FC<Props> = ({ navigation, pickLink }) => {
   const [backVisible, isBackVisible] = useState<boolean>();
   const [forwardVisible, isForwardVisible] = useState<boolean>();
 
@@ -78,8 +79,10 @@ export const Navigation: React.FC<Props> = ({ navigation }) => {
             key={index}
           >
             <NavLink
+              id={item.name}
               to={`/${item.name}`}
               className='navigation__list--link'
+              onClick={pickLink}
             >
               <button
                 type='button'

@@ -64,7 +64,7 @@ body {
   max-width: 1024px;
   grid-template-columns: minmax(320px, 900px);
   grid-template-rows: minmax(min-content, max-content);
-  background: linear-gradient(darkorange 5%, antiquewhite 5%);
+  background: antiquewhite;
   border-radius: 20px;
   
   // GRADIENT BORDER RULES:
@@ -82,9 +82,7 @@ body {
   //     opacity: 1;
   //   }
   // }
-}
 
-.main {
   &::before {
     content: "";
     position: absolute;
@@ -101,5 +99,67 @@ body {
     width: 100%;
     height: 1px;
     background-color: darkorange;
+  }
+}
+
+.footer {
+  width: 100%;
+  background: linear-gradient(antiquewhite 40%, darkorange);
+  border-radius: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 136px;
+    height: 1px;
+    width: 100%;
+    background-color: black;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 140px;
+    height: 1px;
+    width: 100%;
+    background-color: darkorange;
+  }
+
+  &__data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      box-sizing: border-box;
+      border-bottom: 1px dotted transparent;
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      text-decoration: none;
+      color: black;
+
+      &:hover {
+        border-bottom: 1px dotted black;
+        cursor: pointer;
+      }
+
+      &:active {
+        color: darkorange;
+        text-decoration: dotted;
+      }
+    }
+  }
+
+  &__year {
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
   }
 }

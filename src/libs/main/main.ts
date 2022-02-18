@@ -9,6 +9,6 @@ import h8 from '../../images/backgrounds/header/easter_eggs.jpg';
 import h9 from '../../images/backgrounds/header/christmas.jpg';
 import h10 from '../../images/backgrounds/header/main_theme.jpg';
 
-export const home = [
+export const main = [
   h1, h2, h3, h4, h5, h6, h7, h8, h9, h10
 ];
