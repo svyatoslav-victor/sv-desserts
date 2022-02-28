@@ -56,10 +56,15 @@ export const Content: React.FC<Props> = ({ linkName }) => {
           <div
             key={index}
             className="main__image"
-            style={{
-              backgroundImage: `url(${element})`,
-            }}
+            // style={{
+            //   backgroundImage: `url(${element})`,
+            // }}
           >
+            <img
+              className="main__content--image"
+              src={element}
+              alt="main_content"
+            />
           </div>
         ))}
       </div>

@@ -14,6 +14,18 @@ export const App: React.FC = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [link, setLink] = useState<string>('');
 
+  const date: Date = new Date();
+  const month: number = date.getMonth();
+  const [backgroundColor, setBackgroundColor] = useState('antiquewhite');
+
+  useEffect(() => {
+    if (month === 3) {
+      setBackgroundColor('lightblue');
+    } else {
+      setBackgroundColor('antiquewhite');
+    };
+  });
+
   const changeLink = (event: React.MouseEvent) => {
     setLink(event.currentTarget.id);
   };
@@ -37,20 +49,21 @@ export const App: React.FC = () => {
     }
   }, []);
 
-  // const handleClick = () => {
-  //   return (
-  //     <img src={navbar[0].link} alt="" />
-  //   )
-  // };
+  const body = document.querySelector('body');
+  if (body) {
+    body.style.background = backgroundColor;
+  }
 
   return (
     <div className="wrapper">
       <Background />
 
-      <div className="content">
+      <div
+        className={month === 3 ? 'content--easter' : 'content'}
+      >
         <div className="scrollToTop">
           <button
-            className="scrollToTop__button"
+            className={month === 3 ? 'scrollToTop__button--easter' : 'scrollToTop__button'}
             style={{
               opacity: !isVisible ? 0 : 1,
             }}
@@ -77,7 +90,7 @@ export const App: React.FC = () => {
           </Routes>
         </div>
 
-      <footer className="footer">
+      <footer className={month === 3 ? 'footer--easter' : 'footer'}>
         <div className="footer__data">
           <a href="./">
             <img className="footer__image" src={cupcake} width="50px" height="50px" alt="cupcake" />

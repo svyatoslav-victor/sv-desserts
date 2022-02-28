@@ -53,6 +53,12 @@
     &:last-child {
       padding-right: 0;
     }
+
+    &:hover {
+      .navigation__list--image {
+        outline: 1px dotted darkorange;
+      }
+    }
   }
 
   &--link {

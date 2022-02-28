@@ -10,11 +10,16 @@ export const Main: React.FC = () => {
         {main.map((element, index) => (
           <div
             key={index}
-            className="main__image"
-            style={{
-              backgroundImage: `url(${element})`,
-            }}
+            className="main__content"
+            // style={{
+            //   backgroundImage: `url(${element})`,
+            // }}
           >
+            <img
+              className="main__content--image"
+              src={element}
+              alt="main_content"
+            />
           </div>
         ))}
       </div>
