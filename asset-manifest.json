@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/sv-desserts/static/css/main.754e6d50.css",
-    "main.js": "/sv-desserts/static/js/main.41de8e3d.js",
+    "main.css": "/sv-desserts/static/css/main.b75d5963.css",
+    "main.js": "/sv-desserts/static/js/main.51b5457f.js",
     "static/js/787.c6a9aefb.chunk.js": "/sv-desserts/static/js/787.c6a9aefb.chunk.js",
     "static/media/christmas.jpg": "/sv-desserts/static/media/christmas.5c23d23a3640a8eb7912.jpg",
     "static/media/main_theme.jpg": "/sv-desserts/static/media/main_theme.e7bcc318ccdbca9bd777.jpg",
@@ -14,16 +14,24 @@
     "static/media/1.jpg": "/sv-desserts/static/media/1.f427005cf40bed464d34.jpg",
     "static/media/2.jpg": "/sv-desserts/static/media/2.ebe81be3bb80e3004133.jpg",
     "static/media/5.jpg": "/sv-desserts/static/media/5.2299b352ba6568e8bc18.jpg",
+    "static/media/sv-desserts_logo.png": "/sv-desserts/static/media/sv-desserts_logo.b47b205fd281a26482c7.png",
     "static/media/cake_bandw.png": "/sv-desserts/static/media/cake_bandw.ba45a8b5081534ee4a29.png",
     "static/media/ig-bw.png": "/sv-desserts/static/media/ig-bw.3e87baff890d598f1863.png",
     "static/media/phone.png": "/sv-desserts/static/media/phone.9390779e0205937ec9ce.png",
+    "static/media/easter.svg": "/sv-desserts/static/media/easter.cc64a9ade47d937ab21b76cf4d1a811e.svg",
+    "static/media/marshmallow.svg": "/sv-desserts/static/media/marshmallow.6f7c46a18725e8f5cf0976e9b35b045e.svg",
+    "static/media/cakes.svg": "/sv-desserts/static/media/cakes.ea16c211271b4253cd5a834e925b6e8c.svg",
+    "static/media/process.svg": "/sv-desserts/static/media/process.441aed8377001d4d9d5f7e33e297196f.svg",
+    "static/media/prices.svg": "/sv-desserts/static/media/prices.637d8e9768177fae7ae1035f530fba8f.svg",
     "index.html": "/sv-desserts/index.html",
-    "main.754e6d50.css.map": "/sv-desserts/static/css/main.754e6d50.css.map",
-    "main.41de8e3d.js.map": "/sv-desserts/static/js/main.41de8e3d.js.map",
+    "static/media/schtollen.svg": "/sv-desserts/static/media/schtollen.1d88298ee51558b8031a3ff477da1894.svg",
+    "static/media/reviews.svg": "/sv-desserts/static/media/reviews.d88ce9a22a956e7f29e3a49986f862c6.svg",
+    "main.b75d5963.css.map": "/sv-desserts/static/css/main.b75d5963.css.map",
+    "main.51b5457f.js.map": "/sv-desserts/static/js/main.51b5457f.js.map",
     "787.c6a9aefb.chunk.js.map": "/sv-desserts/static/js/787.c6a9aefb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.754e6d50.css",
-    "static/js/main.41de8e3d.js"
+    "static/css/main.b75d5963.css",
+    "static/js/main.51b5457f.js"
   ]
 }
