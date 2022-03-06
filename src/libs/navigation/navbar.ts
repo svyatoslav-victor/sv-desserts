@@ -1,42 +1,50 @@
+import reviews from '../../images/icons/navigation/reviews.svg'; 
+import easter from '../../images/icons/navigation/easter.svg';
+import prices from '../../images/icons/navigation/prices.svg';
+import cakes from '../../images/icons/navigation/cakes.svg';
+import process from '../../images/icons/navigation/process.svg';
+import marshmallow from '../../images/icons/navigation/marshmallow.svg';
+import schtollen from '../../images/icons/navigation/schtollen.svg';
+
 export const navbar = [
   {
-    link: require('../../images/nav_bar/reviews.jpg'),
+    link: reviews,
     name: 'reviews',
-    title: 'Отзывы', 
+    title: 'Отзывы',
     // 🌟
   },
   {
-    link: require('../../images/nav_bar/easter.jpg'),
+    link: easter,
     name: 'easter',
     title: 'Пасха',
     // 🐣
   },
   {
-    link: require('../../images/nav_bar/prices.jpg'),
+    link: prices,
     name: 'prices',
     title: 'Прайс-лист',
     // 💵
   },
   {
-    link: require('../../images/nav_bar/cakes.jpg'),
+    link: cakes,
     name: 'cakes',
     title: 'Торты',
     // 🍰
   },
   {
-    link: require('../../images/nav_bar/process.jpg'),
+    link: process,
     name: 'process',
     title: 'Процесс',
     // 👩🏼‍🍳
   },
   {
-    link: require('../../images/nav_bar/marshmellow.jpg'),
+    link: marshmallow,
     name: 'marshmallow',
     title: 'Зефир',
     // 🍏
   },
   {
-    link: require('../../images/nav_bar/schtollen.jpg'),
+    link: schtollen,
     name: 'schtollen',
     title: 'Штолллен',
     // 🎄

@@ -3,9 +3,11 @@ import headerImages from '../../tools/backgrounds';
 
 import './Background.scss';
 
-export const Background = () => {
-  const date: Date = new Date();
-  const month: number = date.getMonth();
+type Props = {
+  month: number,
+};
+
+export const Background: React.FC<Props> = ({ month }) => {
   const [background, setBackground] = useState(headerImages[0]);
 
   useEffect(() => {

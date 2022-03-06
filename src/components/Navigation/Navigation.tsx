@@ -11,9 +11,10 @@ interface Nav {
 type Props = {
   navigation: Nav[],
   pickLink: (event: React.MouseEvent) => void,
+  month: number,
 };
 
-export const Navigation: React.FC<Props> = ({ navigation, pickLink }) => {
+export const Navigation: React.FC<Props> = ({ navigation, pickLink, month }) => {
   const [backVisible, isBackVisible] = useState<boolean>();
   const [forwardVisible, isForwardVisible] = useState<boolean>();
 
@@ -43,9 +44,8 @@ export const Navigation: React.FC<Props> = ({ navigation, pickLink }) => {
   };
 
   const trackScroll = () => {
-    if (navList && navList?.scrollLeft === 0) {
+    if (navList && navList.scrollLeft === 0) {
       isBackVisible(false);
-      isForwardVisible(true);
     } 
     
     if (navList && (navList.scrollLeft > 0
@@ -61,7 +61,7 @@ export const Navigation: React.FC<Props> = ({ navigation, pickLink }) => {
   return (
     <div className="navigation">
       <button
-        className="scroll"
+        className={month === 3 ? 'scroll--easter' : 'scroll'}
         onClick={toStart}
         style={{
           visibility: backVisible ? 'visible' : 'collapse',
@@ -75,13 +75,13 @@ export const Navigation: React.FC<Props> = ({ navigation, pickLink }) => {
       >
         {navigation.map((item, index) => (
           <li
-            className='navigation__list--item'
+            className="navigation__list--item"
             key={index}
           >
             <NavLink
               id={item.name}
               to={`/${item.name}`}
-              className='navigation__list--link'
+              className="navigation__list--link"
               onClick={pickLink}
             >
               <button
@@ -90,7 +90,7 @@ export const Navigation: React.FC<Props> = ({ navigation, pickLink }) => {
                 className='navigation__list--button'
               >
                 <img
-                  className='navigation__list--image'
+                  className={month === 3 ? 'navigation__list--image--easter' : 'navigation__list--image'}
                   src={item.link}
                   alt={item.name}
                 />
@@ -105,7 +105,7 @@ export const Navigation: React.FC<Props> = ({ navigation, pickLink }) => {
         ))}
       </ul>
       <button
-        className="scroll"
+        className={month === 3 ? 'scroll--easter' : 'scroll'}
         onClick={toEnd}
         style={{
           visibility: forwardVisible ? 'visible' : 'collapse',

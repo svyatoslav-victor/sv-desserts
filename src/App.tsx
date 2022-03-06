@@ -6,7 +6,10 @@ import { Header } from './components/Header/Header';
 import { Main } from './components/Main/Main';
 import { Navigation } from './components/Navigation/Navigation';
 import { Content } from './components/Content/Content';
+import { PageNotFound } from './components/PageNotFound/PageNotFound';
 import cupcake from './images/cake_bandw.png';
+import instaLogo from './images/ig-bw.png';
+import phone from './images/phone.png';
 
 import './App.scss';
 
@@ -56,7 +59,7 @@ export const App: React.FC = () => {
 
   return (
     <div className="wrapper">
-      <Background />
+      <Background month={month}/>
 
       <div
         className={month === 3 ? 'content--easter' : 'content'}
@@ -79,14 +82,15 @@ export const App: React.FC = () => {
           </button>
         </div>
 
-        <Header />
-        <Navigation navigation={navbar} pickLink={changeLink} />
+        <Header month={month} />
+        <Navigation navigation={navbar} pickLink={changeLink} month={month} />
 
         <div className="main">
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/sv-desserts" element={<Main />} />
             <Route path={`/${link}`} element={<Content linkName={link} />} />
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </div>
 
@@ -96,9 +100,18 @@ export const App: React.FC = () => {
             <img className="footer__image" src={cupcake} width="50px" height="50px" alt="cupcake" />
           </a>
           <div className="footer__links">
-            <a href="tel:+380933638593">+380 93 363 85 93</a>
-            <a href="https://www.instagram.com/1vasilkova/">Sofia Vasilkova</a>
-            <a href="https://www.instagram.com/sv_desserts/">sv_desserts</a>
+            <a
+              href="tel:+380933638593"
+            >
+              <img src={phone} width='25px' height='25px' alt="instagram" />
+              +380 93 363 85 93
+            </a>
+            <a
+              href="https://www.instagram.com/sv_desserts/"
+            >
+              <img src={instaLogo} width='25px' height='25px' alt="instagram" />
+              &nbsp;@sv_desserts
+            </a>
           </div>
         </div>
         <div className="footer__year">&#169; 2022</div>

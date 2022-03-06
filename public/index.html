@@ -32,12 +32,62 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>sv_desserts&#8482;</title>
+    <style>
+      .loading__container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: url(%PUBLIC_URL%/loading.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .message__container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+      }
+
+      .message {
+        padding: 10vh 10vw;
+        border: 1px dotted black;
+        border-radius: 20px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 40px;
+        font-weight: 100;
+      }
+
+      @media screen and (max-width: 1200px) {
+        .loading {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: url(%PUBLIC_URL%/loading2.png);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
-      <div>
-        <p>Loading...</p>
+      <div class="loading__container">
+        <div class="loading">
+          <div class="message__container">
+            <p class="message">Loading...</p>
+          </div>
+        </div>
       </div>
     </div>
     <!--

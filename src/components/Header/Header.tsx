@@ -1,12 +1,16 @@
-import sonyaLogo from '../../images/sv_desserts_logo.jpg';
-import logo from '../../images/ig-bw.png';
+import sonyaLogo from '../../images/icons/sv-desserts_logo.png';
+import instaLogo from '../../images/ig-bw.png';
 import phone from '../../images/phone.png';
 
 import './Header.scss';
 
-export const Header = () => {
+type Props = {
+  month: number,
+};
+
+export const Header: React.FC<Props> = ({ month }) => {
   return (
-    <header className="header">
+    <header className={month === 3 ? 'header--easter' : 'header'}>
       <div className='header__logo'>
         <a className='linkToHome' href="./">
           <img className='sonyaLogo' src={sonyaLogo} alt="logo_img" />
@@ -34,7 +38,10 @@ export const Header = () => {
             className='insta__link'
             href="https://www.instagram.com/sv_desserts/"
           >
-            <img src={logo} width='35px' height='35px' alt="instagram" />
+            <img
+              className='insta__logo'
+              src={instaLogo}
+              alt="instagram" />
           </a>
         </div>
       </div>
