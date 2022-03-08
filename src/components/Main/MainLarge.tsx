@@ -1,11 +1,15 @@
 import React from 'react';
+import sonyaLogo from '../../images/icons/sv-desserts_logo.png';
 
 import './MainLarge.scss';
 
 type Props = {
-  array: string[],
+  array: {
+    image: string,
+    description: string,
+  }[],
   index: number,
-  close: () => void,
+  close: (event: React.SyntheticEvent) => void,
   goBack: () => void,
   goForward: () => void,
 };
@@ -18,35 +22,47 @@ export const MainLarge: React.FC<Props> = ({
   goForward,
 }) => {
   return (
-    <div className="container">
+    <div className="container" onClick={close}>
       <div className="main__large">
-        <button
-          className="back"
-          style={{
-            visibility: index === 0 ? 'collapse' : 'visible'
-          }}
-          onClick={goBack}
-        >
-          back
-        </button>
+        <div className="main__large--content">
+          <img className="image" src={array[index].image} alt="/" />
+          <div className="description">
+            <div className="description__logo">
+              <img className="description__logo--image" src={sonyaLogo} width='30px' height='30px' alt="" />
+              <p className="description__logo--name">@sv_desserts</p>
+            </div>
+            <p className="description__text">{array[index].description}</p>
+          </div>
+        </div>
 
-        <img className="image" src={array[index]} alt="/" />
+        <div className="buttons">
+          <button
+            className="button button--back"
+            style={{
+              visibility: index === 0 ? 'collapse' : 'visible'
+            }}
+            onClick={goBack}
+          >
+            &#10096;
+          </button>
 
-        <button
-          className="forward"
-          style={{
-            visibility: index === array.length - 1 ? 'collapse' : 'visible'
-          }}
-          onClick={goForward}
-        >
-          forward
-        </button>
+          <button
+            className="button button--close"
+            onClick={close}
+          >
+            &#10005;
+          </button>
 
-        <button
-          onClick={close}
-        >
-          X
-        </button>
+          <button
+            className="button button--forward"
+            style={{
+              visibility: index === array.length - 1 ? 'collapse' : 'visible'
+            }}
+            onClick={goForward}
+          >
+            &#10097;
+          </button>
+        </div>
       </div>
     </div>
   );

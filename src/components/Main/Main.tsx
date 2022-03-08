@@ -1,5 +1,5 @@
 import React, { SyntheticEvent, useState } from 'react';
-import { main } from '../../libs/main/main';
+import { main1 } from '../../libs/main/main';
 import { MainLarge } from './MainLarge';
 
 import './Main.scss';
@@ -26,7 +26,12 @@ export const Main: React.FC = () => {
     setVisibility(true);
   };
 
-  const close = () => {
+  const close = (event: React.SyntheticEvent) => {
+    if (event.target !== event.currentTarget) {
+      event.preventDefault();
+      return;
+    }
+
     if (body) {
       body.style.overflow = 'overlay';
     };
@@ -37,7 +42,7 @@ export const Main: React.FC = () => {
   return (
       <div className="main">
         <div className="main__wrapper">
-        {main.map((element, index) => (
+        {main1.map((element, index) => (
           <div
             key={index}
             className="main__content"
@@ -48,7 +53,7 @@ export const Main: React.FC = () => {
             <img
               id={index.toString()}
               className="main__content--image"
-              src={element}
+              src={element.image}
               alt="main_content"
               onClick={showMainLarge}
             />
@@ -60,7 +65,7 @@ export const Main: React.FC = () => {
         close={close}
         goBack={goBack}
         goForward={goForward}
-        array={main}
+        array={main1}
         index={index}
       />}
     </div>

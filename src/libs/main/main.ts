@@ -12,3 +12,46 @@ import h10 from '../../images/backgrounds/header/main_theme.jpg';
 export const main = [
   h1, h2, h3, h4, h5, h6, h7, h8, h9, h10
 ];
+
+export const main1 = [
+  {
+    image: h1,
+    description: 'Description 1',
+  },
+  {
+    image: h2,
+    description: 'Description 2',
+  },
+  {
+    image: h3,
+    description: 'Description 3',
+  },
+  {
+    image: h4,
+    description: 'Description 4',
+  },
+  {
+    image: h5,
+    description: 'Description 5',
+  },
+  {
+    image: h6,
+    description: 'Description 6',
+  },
+  {
+    image: h7,
+    description: 'Description 7',
+  },
+  {
+    image: h8,
+    description: 'Description 8',
+  },
+  {
+    image: h9,
+    description: 'Description 9',
+  },
+  {
+    image: h10,
+    description: 'Description 10',
+  }
+]
