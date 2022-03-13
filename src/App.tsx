@@ -100,13 +100,13 @@ export const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/sv-desserts/" element={<Main />} />
-            <Route path="/reviews" element={<Reviews />} />
-            <Route path="/easter" element={<Easter />} />
-            <Route path="/prices" element={<Prices />} />
-            <Route path="/cakes" element={<Cakes />} />
-            <Route path="/process" element={<Process />} />
-            <Route path="/marshmallow" element={<Marshmallow />} />
-            <Route path="/schtollen" element={<Schtollen />} />
+            <Route path="/sv-desserts/reviews" element={<Reviews />} />
+            <Route path="/sv-desserts/easter" element={<Easter />} />
+            <Route path="/sv-desserts/prices" element={<Prices />} />
+            <Route path="/sv-desserts/cakes" element={<Cakes />} />
+            <Route path="/sv-desserts/process" element={<Process />} />
+            <Route path="/sv-desserts/marshmallow" element={<Marshmallow />} />
+            <Route path="/sv-desserts/schtollen" element={<Schtollen />} />
           </Routes>
         </div>
 

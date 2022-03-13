@@ -97,7 +97,7 @@ export const Navigation: React.FC<Props> = ({ navigation, pickLink, month }) => 
           >
             <NavLink
               id={item.name}
-              to={`${item.name}`}
+              to={`sv-desserts/${item.name}`}
               className="navigation__list--link"
               onClick={pickLink}
             >

@@ -1,6 +1,6 @@
-import mainTheme from '../images/backgrounds/header/main_theme.jpg'
-import easter from '../images/backgrounds/header/easter_eggs.jpg';
-import xmas from '../images/backgrounds/header/christmas.jpg';
+import mainTheme from '../images/backgrounds/main_theme.jpg'
+import easter from '../images/backgrounds/easter_eggs.jpg';
+import xmas from '../images/backgrounds/christmas.jpg';
 
 const headerImages = [
   mainTheme,
