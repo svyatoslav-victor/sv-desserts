@@ -1,6 +1,7 @@
 import sonyaLogo from '../../images/icons/sv-desserts_logo.png';
 import instaLogo from '../../images/ig-bw.png';
 import phone from '../../images/phone.png';
+import classNames from 'classnames';
 
 import './Header.scss';
 
@@ -10,7 +11,9 @@ type Props = {
 
 export const Header: React.FC<Props> = ({ month }) => {
   return (
-    <header className={month === 3 ? 'header--easter' : 'header'}>
+    <header className={classNames('header', {
+      'header--easter': month === 3,
+    })}>
       <div className='header__logo'>
         <a className='linkToHome' href="./">
           <img className='sonyaLogo' src={sonyaLogo} alt="logo_img" />

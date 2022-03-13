@@ -1,7 +1,18 @@
-import pr1 from '../../images/backgrounds/nav/prices/7.jpg';
-import pr2 from '../../images/backgrounds/nav/reviews/1.jpg';
-import pr3 from '../../images/backgrounds/nav/reviews/2.jpg';
+import pr1 from '../../images/content/content_1.jpg';
+import pr2 from '../../images/content/content_3.jpg';
+import pr3 from '../../images/content/content_5.jpg';
 
 export const process = [
-  pr1, pr2, pr3
+  {
+    image: pr1,
+    description: 'Description 1',
+  },
+  {
+    image: pr2,
+    description: 'Description 2',
+  },
+  {
+    image: pr3,
+    description: 'Description 3',
+  }
 ];

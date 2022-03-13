@@ -1,9 +1,18 @@
-import s1 from '../../images/backgrounds/nav/prices/7.jpg';
-import s2 from '../../images/backgrounds/nav/prices/8.jpg';
-import s3 from '../../images/backgrounds/nav/reviews/1.jpg';
+import s1 from '../../images/content/content_3.jpg';
+import s2 from '../../images/content/content_7.jpg';
+import s3 from '../../images/content/content_10.jpg';
 
 export const schtollen = [
-  s1,
-  s2,
-  s3
+  {
+    image: s1,
+    description: 'Description 1',
+  },
+  {
+    image: s2,
+    description: 'Description 2',
+  },
+  {
+    image: s3,
+    description: 'Description 3',
+  }
 ];

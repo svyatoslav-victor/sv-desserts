@@ -1,10 +1,8 @@
 import React, { SyntheticEvent, useState } from 'react';
-import { main } from '../../libs/main/main';
-import { MainLarge } from './MainLarge';
+import { marshmallow } from '../../libs/content/marshmallow';
+import { ContentLarge } from './ContentLarge';
 
-import './Main.scss';
-
-export const Main: React.FC = () => {
+export const Marshmallow: React.FC = () => {
   const [visibility, setVisibility] = useState<boolean>(false);
   const body = document.querySelector('body');
   const [index, setIndex] = useState<number>(-1);
@@ -17,7 +15,7 @@ export const Main: React.FC = () => {
     setIndex(index + 1);
   };
 
-  const showMainLarge = (event: SyntheticEvent<HTMLImageElement>) => {
+  const showContentLarge = (event: SyntheticEvent<HTMLImageElement>) => {
     if (body) {
       body.style.overflow = 'hidden';
     };
@@ -42,27 +40,26 @@ export const Main: React.FC = () => {
   return (
       <div className="main">
         <div className="main__wrapper">
-        {main.map((element, index) => (
+        {marshmallow.map((element, index) => (
           <div
             key={index}
-            className="main__content"
+            className="main__image"
           >
             <img
-              id={index.toString()}
               className="main__content--image"
               src={element.image}
               alt="main_content"
-              onClick={showMainLarge}
+              onClick={showContentLarge}
             />
           </div>
         ))}
       </div>
 
-      {visibility && <MainLarge
+      {visibility && <ContentLarge
         close={close}
         goBack={goBack}
         goForward={goForward}
-        array={main}
+        array={marshmallow}
         index={index}
       />}
     </div>

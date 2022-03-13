@@ -28,6 +28,12 @@
   }
 }
 
+.scroll--easter {
+  &:active {
+    background: linear-gradient(transparent 40%, blue 60%, transparent 90%);
+  }
+}
+
 .navigation__list {
   padding: 0 2px;
   margin: 0;
@@ -128,6 +134,15 @@
   }
 }
 
+.navigation__list--easter {
+
+  &:hover {
+    .navigation__list--image {
+      outline: 1px dotted blue;
+    }
+  }
+}
+
 .active {
   .navigation__list--image {
     border: 7px double darkorange;
@@ -137,93 +152,6 @@
   .navigation__list--image--easter {
     border: 7px double blue;
     outline: none;
-  }
-}
-
-.scroll--easter {
-  font-size: 14px;
-  border: none;
-  background: transparent;
-  padding-top: 30px;
-  cursor: pointer;
-
-  &:hover {
-    background: linear-gradient(transparent 40%, rgba(112, 112, 112, 0.247) 60%, transparent 90%);
-  }
-
-  &:active {
-    background: linear-gradient(transparent 40%, blue 60%, transparent 90%);
-  }
-}
-
-.navigation__list--easter {
-  padding: 0 2px;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  max-width: 85%;
-  box-sizing: content-box;
-  flex-direction: row;
-  overflow-x: overlay;
-
-  &::-webkit-scrollbar {
-    height: 10px;
-  }
-
-  &--item {
-    list-style-type: none;
-    padding: 0 5px;
-
-    &:first-child {
-      padding-left: 0;
-    }
-
-    &:last-child {
-      padding-right: 0;
-    }
-
-    &:hover {
-      .navigation__list--image {
-        outline: 1px dotted blue;
-      }
-    }
-  }
-
-  &--link {
-    padding: 5px;
-  }
-
-  &--button {
-    width: 110px;
-    border: none;
-    border-radius: 20%;
-    -webkit-border-radius: 20%;
-    background-color: transparent;
-    cursor: pointer;
-
-    &:active {
-      @include no-touch-select;
-      outline: none;
-    }
-
-    &:focus {
-      @include no-touch-select;
-      outline: none;
-    }
-  }
-
-  &--image {
-    width: 70px;
-    height: 70px;
-    border: 7px double transparent;
-    border-radius: 50%;
-  }
-
-  &--name {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    margin: 0;
-    padding-top: 5px;
   }
 }
 
@@ -322,10 +250,23 @@
       padding-top: 5px;
     }
   }
-  
+
+  .navigation__list--easter {
+    &--item:hover {
+      .navigation__list--image--easter {
+        outline: 1px dotted blue;
+      }
+    }
+  }
+
   .active {
     .navigation__list--image {
       border: 7px double darkorange;
+      outline: none;
+    }
+
+    .navigation__list--image--easter {
+      border: 7px double blue;
       outline: none;
     }
   }

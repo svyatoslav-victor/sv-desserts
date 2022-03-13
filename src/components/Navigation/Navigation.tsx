@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import classNames from 'classnames';
+
 import './Navigation.scss';
 
 interface Nav {
@@ -17,8 +19,17 @@ type Props = {
 export const Navigation: React.FC<Props> = ({ navigation, pickLink, month }) => {
   const [backVisible, isBackVisible] = useState<boolean>();
   const [forwardVisible, isForwardVisible] = useState<boolean>();
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
   const navList = document.querySelector('ul');
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+  });
 
   useEffect(() => {
     isBackVisible(false);
@@ -61,10 +72,14 @@ export const Navigation: React.FC<Props> = ({ navigation, pickLink, month }) => 
   return (
     <div className="navigation">
       <button
-        className={month === 3 ? 'scroll--easter' : 'scroll'}
+        className={classNames('scroll', {
+          'scroll--easter': month === 3,
+        })}
         onClick={toStart}
         style={{
-          visibility: backVisible ? 'visible' : 'collapse',
+          visibility: backVisible && windowWidth >= 700
+            ? 'visible'
+            : 'collapse',
         }}
       >
         &#8920;
@@ -75,12 +90,14 @@ export const Navigation: React.FC<Props> = ({ navigation, pickLink, month }) => 
       >
         {navigation.map((item, index) => (
           <li
-            className="navigation__list--item"
+            className={classNames('navigation__list--item', {
+              'navigation__list--easter--item': month === 3,
+            })}
             key={index}
           >
             <NavLink
               id={item.name}
-              to={`/${item.name}`}
+              to={`${item.name}`}
               className="navigation__list--link"
               onClick={pickLink}
             >
@@ -90,7 +107,9 @@ export const Navigation: React.FC<Props> = ({ navigation, pickLink, month }) => 
                 className='navigation__list--button'
               >
                 <img
-                  className={month === 3 ? 'navigation__list--image--easter' : 'navigation__list--image'}
+                  className={classNames('navigation__list--image', {
+                    'navigation__list--image--easter': month === 3,
+                  })}
                   src={item.link}
                   alt={item.name}
                 />
@@ -105,10 +124,14 @@ export const Navigation: React.FC<Props> = ({ navigation, pickLink, month }) => 
         ))}
       </ul>
       <button
-        className={month === 3 ? 'scroll--easter' : 'scroll'}
+        className={classNames('scroll', {
+          'scroll--easter': month === 3,
+        })}
         onClick={toEnd}
         style={{
-          visibility: forwardVisible ? 'visible' : 'collapse',
+          visibility: forwardVisible && windowWidth >= 700
+            ? 'visible'
+            : 'collapse',
         }}
       >
         &#8921;

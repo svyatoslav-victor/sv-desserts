@@ -6,70 +6,11 @@
 	-webkit-user-select:none;  /* prevent copy paste, to allow, change 'none' to 'text' */
 }
 
-.header--easter {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 15px 0;
-  position: sticky;
-  // top: 0; - OLD
-  // background-color: antiquewhite; - OLD
-  top: -17px;
-  background: linear-gradient(rgba(0, 0, 139, 0.822), lightblue);
-  border-radius: 20px;
-  z-index: 2;
-
-  .name {
-    margin: 0;
-    padding: 0;
-  }
-
-  .linkToHome {
-    height: 90px;
-    padding: 10px;
-  }
-
-  .sonyaLogo {
-    height: 90px;
-    border-radius: 50%;
-  }
-
-  &__logo {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    font-size: 3.3rem;
-    font-weight: 100;
-    padding: 0 40px;
-
-    ::after {
-      content: "";
-      width: calc(100% - 142px);
-      position: absolute;
-      top: 120px;
-      left: 140px;
-      border: 1px solid rgb(92, 92, 92);
-      background-color: rgb(92, 92, 92);
-    }
-  }
-
-  &__contacts {
-    display: grid;
-    grid-auto-flow: column;
-    column-gap: 20px;
-    position: relative;
-    justify-content: end;
-    align-items: center;
-    margin: 0 40px;
-  }
-}
-
 .header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 15px 0;
   position: sticky;
-  // top: 0; - OLD
-  // background-color: antiquewhite; - OLD
   top: -17px;
   background: linear-gradient(darkorange, antiquewhite);
   border-radius: 20px;
@@ -120,6 +61,10 @@
   }
 }
 
+.header--easter {
+  background: linear-gradient(rgba(0, 0, 139, 0.822), lightblue);
+}
+
 a {
   text-decoration: none;
 
@@ -157,88 +102,11 @@ a:active {
 }
 
 @media screen and (max-width: 700px) {
-  .header--easter {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 15px 0;
-    position: sticky;
-    // top: 0; - OLD
-    // background-color: antiquewhite; - OLD
-    top: -17px;
-    background: linear-gradient(rgba(0, 0, 139, 0.822), lightblue);
-    border-radius: 20px;
-    z-index: 2;
-  
-    .name {
-      margin: 0;
-      padding: 0;
-    }
-  
-    .linkToHome {
-      height: 45px;
-      padding: 10px;
-    }
-  
-    .sonyaLogo {
-      height: 45px;
-      border-radius: 50%;
-    }
-  
-    &__logo {
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      font-size: 1.6rem;
-      font-weight: 200;
-      padding: 0 5px;
-  
-      ::after {
-        content: "";
-        width: calc(100% - 102px);
-        position: absolute;
-        top: 80px;
-        left: 100px;
-        border: 1px solid rgb(92, 92, 92);
-        background-color: rgb(92, 92, 92);
-      }
-    }
-  
-    &__contacts {
-      display: grid;
-      grid-auto-flow: column;
-      column-gap: 5px;
-      position: relative;
-      justify-content: end;
-      align-items: center;
-      margin: 0 10px;
-
-      .phone_number {
-        font-family: 'Montserrat', sans-serif;
-        position: absolute;
-        opacity: 0;
-        top: 75%;
-        right: 0;
-        color: black;
-        font-size: 8px;
-        font-weight: 300;
-        transition: opacity 1s ease-in-out;
-      }
-    
-      &:hover {
-        .phone_number {
-          opacity: 1;
-        }
-      }
-    }
-  }
-  
   .header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 15px 0;
     position: sticky;
-    // top: 0; - OLD
-    // background-color: antiquewhite; - OLD
     top: -17px;
     background: linear-gradient(darkorange, antiquewhite);
     border-radius: 20px;
@@ -305,6 +173,10 @@ a:active {
         opacity: 1;
       }
     }
+  }
+
+  .header--easter {
+    background: linear-gradient(rgba(0, 0, 139, 0.822), lightblue);
   }
 
   .phone_icon, .insta__logo {

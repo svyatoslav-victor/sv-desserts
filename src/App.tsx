@@ -5,11 +5,18 @@ import { Background } from './components/Background/Background';
 import { Header } from './components/Header/Header';
 import { Main } from './components/Main/Main';
 import { Navigation } from './components/Navigation/Navigation';
-import { Content } from './components/Content/Content';
-import { PageNotFound } from './components/PageNotFound/PageNotFound';
+import classNames from 'classnames';
 import cupcake from './images/cake_bandw.png';
 import instaLogo from './images/ig-bw.png';
 import phone from './images/phone.png';
+
+import { Reviews } from './components/Content/Reviews';
+import { Easter } from './components/Content/Easter';
+import { Prices } from './components/Content/Prices';
+import { Cakes } from './components/Content/Cakes';
+import { Process } from './components/Content/Process';
+import { Marshmallow } from './components/Content/Marshmallow';
+import { Schtollen } from './components/Content/Schtollen';
 
 import './App.scss';
 
@@ -55,18 +62,22 @@ export const App: React.FC = () => {
   const body = document.querySelector('body');
   if (body) {
     body.style.background = backgroundColor;
-  }
+  };
 
   return (
     <div className="wrapper">
       <Background month={month}/>
 
       <div
-        className={month === 3 ? 'content--easter' : 'content'}
+        className={classNames('content', {
+          'content--easter': month === 3,
+        })}
       >
         <div className="scrollToTop">
           <button
-            className={month === 3 ? 'scrollToTop__button--easter' : 'scrollToTop__button'}
+            className={classNames('scrollToTop__button', {
+              'scrollToTop__button--easter': month === 3,
+            })}
             style={{
               opacity: !isVisible ? 0 : 1,
             }}
@@ -88,13 +99,20 @@ export const App: React.FC = () => {
         <div className="main">
           <Routes>
             <Route path="/" element={<Main />} />
-            <Route path="/sv-desserts" element={<Main />} />
-            <Route path={`/${link}`} element={<Content linkName={link} />} />
-            <Route path="*" element={<PageNotFound />} />
+            <Route path="/sv-desserts/" element={<Main />} />
+            <Route path="/reviews" element={<Reviews />} />
+            <Route path="/easter" element={<Easter />} />
+            <Route path="/prices" element={<Prices />} />
+            <Route path="/cakes" element={<Cakes />} />
+            <Route path="/process" element={<Process />} />
+            <Route path="/marshmallow" element={<Marshmallow />} />
+            <Route path="/schtollen" element={<Schtollen />} />
           </Routes>
         </div>
 
-      <footer className={month === 3 ? 'footer--easter' : 'footer'}>
+      <footer className={classNames('footer', {
+        'footer--easter': month === 3,
+      })}>
         <div className="footer__data">
           <a href="./">
             <img className="footer__image" src={cupcake} width="50px" height="50px" alt="cupcake" />

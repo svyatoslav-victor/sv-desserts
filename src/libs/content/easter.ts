@@ -1,9 +1,18 @@
-import e1 from '../../images/backgrounds/nav/easter/4.jpg';
-import e2 from '../../images/backgrounds/nav/easter/5.jpg';
-import e3 from '../../images/backgrounds/nav/easter/6.jpg';
+import e1 from '../../images/content/content_4.jpg';
+import e2 from '../../images/content/content_5.jpg';
+import e3 from '../../images/content/content_6.jpg';
 
 export const easter = [
-  e1,
-  e2,
-  e3
+  {
+    image: e1,
+    description: 'Description 1',
+  },
+  {
+    image: e2,
+    description: 'Description 2',
+  },
+  {
+    image: e3,
+    description: 'Description 3',
+  }
 ];
