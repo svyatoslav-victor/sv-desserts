@@ -1,20 +1,25 @@
 {
   "files": {
-    "main.css": "/sv-desserts/static/css/main.e7253c5c.css",
-    "main.js": "/sv-desserts/static/js/main.f92ac62d.js",
+    "main.css": "/sv-desserts/static/css/main.4398513f.css",
+    "main.js": "/sv-desserts/static/js/main.c6eec318.js",
     "static/js/787.c6a9aefb.chunk.js": "/sv-desserts/static/js/787.c6a9aefb.chunk.js",
     "static/media/christmas.jpg": "/sv-desserts/static/media/christmas.5c23d23a3640a8eb7912.jpg",
     "static/media/main_theme.jpg": "/sv-desserts/static/media/main_theme.e7bcc318ccdbca9bd777.jpg",
     "static/media/easter_eggs.jpg": "/sv-desserts/static/media/easter_eggs.9d3174a65ab530e28eef.jpg",
-    "static/media/7.jpg": "/sv-desserts/static/media/7.a77e6e3385a0400d1bfe.jpg",
-    "static/media/4.jpg": "/sv-desserts/static/media/4.3c59f10f91540f4d5877.jpg",
-    "static/media/6.jpg": "/sv-desserts/static/media/6.ed8ea821e920e4aaf993.jpg",
-    "static/media/3.jpg": "/sv-desserts/static/media/3.9d25e1199c18fb1ede78.jpg",
-    "static/media/8.jpg": "/sv-desserts/static/media/8.51e2195f9e2b1555cdd8.jpg",
-    "static/media/1.jpg": "/sv-desserts/static/media/1.f427005cf40bed464d34.jpg",
-    "static/media/2.jpg": "/sv-desserts/static/media/2.ebe81be3bb80e3004133.jpg",
-    "static/media/5.jpg": "/sv-desserts/static/media/5.2299b352ba6568e8bc18.jpg",
+    "static/media/content_5.jpg": "/sv-desserts/static/media/content_5.0cda8652e494a867595b.jpg",
+    "static/media/main_2.jpg": "/sv-desserts/static/media/main_2.14b23cbd91d03ac4d608.jpg",
+    "static/media/content_6.jpg": "/sv-desserts/static/media/content_6.0c0501761e3a04dfcbe0.jpg",
+    "static/media/content_7.jpg": "/sv-desserts/static/media/content_7.d65e498da8792da0f2ab.jpg",
+    "static/media/content_9.jpg": "/sv-desserts/static/media/content_9.f14ff3bb3b17076bb52f.jpg",
+    "static/media/content_8.jpg": "/sv-desserts/static/media/content_8.ccf827aed7596aa61a23.jpg",
+    "static/media/main_1.jpg": "/sv-desserts/static/media/main_1.c41ec9090204b1b1451b.jpg",
+    "static/media/main_3.jpg": "/sv-desserts/static/media/main_3.a8e983c32f06d2bcca3f.jpg",
+    "static/media/content_2.jpg": "/sv-desserts/static/media/content_2.2927558c293f40257bc1.jpg",
     "static/media/sv-desserts_logo.png": "/sv-desserts/static/media/sv-desserts_logo.b47b205fd281a26482c7.png",
+    "static/media/content_1.jpg": "/sv-desserts/static/media/content_1.28492cddc89162fe46a2.jpg",
+    "static/media/content_3.jpg": "/sv-desserts/static/media/content_3.6d444f7677d196807abe.jpg",
+    "static/media/content_4.jpg": "/sv-desserts/static/media/content_4.f9ff73febcc2a946cfb4.jpg",
+    "static/media/content_10.jpg": "/sv-desserts/static/media/content_10.8629694b99a6279e52c9.jpg",
     "static/media/cake_bandw.png": "/sv-desserts/static/media/cake_bandw.ba45a8b5081534ee4a29.png",
     "static/media/ig-bw.png": "/sv-desserts/static/media/ig-bw.3e87baff890d598f1863.png",
     "static/media/phone.png": "/sv-desserts/static/media/phone.9390779e0205937ec9ce.png",
@@ -26,12 +31,12 @@
     "index.html": "/sv-desserts/index.html",
     "static/media/schtollen.svg": "/sv-desserts/static/media/schtollen.1d88298ee51558b8031a3ff477da1894.svg",
     "static/media/reviews.svg": "/sv-desserts/static/media/reviews.d88ce9a22a956e7f29e3a49986f862c6.svg",
-    "main.e7253c5c.css.map": "/sv-desserts/static/css/main.e7253c5c.css.map",
-    "main.f92ac62d.js.map": "/sv-desserts/static/js/main.f92ac62d.js.map",
+    "main.4398513f.css.map": "/sv-desserts/static/css/main.4398513f.css.map",
+    "main.c6eec318.js.map": "/sv-desserts/static/js/main.c6eec318.js.map",
     "787.c6a9aefb.chunk.js.map": "/sv-desserts/static/js/787.c6a9aefb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e7253c5c.css",
-    "static/js/main.f92ac62d.js"
+    "static/css/main.4398513f.css",
+    "static/js/main.c6eec318.js"
   ]
 }
