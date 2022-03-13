@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/sv-desserts/static/css/main.4398513f.css",
+    "main.css": "/sv-desserts/static/css/main.47f3f5ba.css",
     "main.js": "/sv-desserts/static/js/main.4677e19a.js",
     "static/js/787.c6a9aefb.chunk.js": "/sv-desserts/static/js/787.c6a9aefb.chunk.js",
     "static/media/christmas.jpg": "/sv-desserts/static/media/christmas.5c23d23a3640a8eb7912.jpg",
@@ -31,12 +31,12 @@
     "index.html": "/sv-desserts/index.html",
     "static/media/schtollen.svg": "/sv-desserts/static/media/schtollen.1d88298ee51558b8031a3ff477da1894.svg",
     "static/media/reviews.svg": "/sv-desserts/static/media/reviews.d88ce9a22a956e7f29e3a49986f862c6.svg",
-    "main.4398513f.css.map": "/sv-desserts/static/css/main.4398513f.css.map",
+    "main.47f3f5ba.css.map": "/sv-desserts/static/css/main.47f3f5ba.css.map",
     "main.4677e19a.js.map": "/sv-desserts/static/js/main.4677e19a.js.map",
     "787.c6a9aefb.chunk.js.map": "/sv-desserts/static/js/787.c6a9aefb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4398513f.css",
+    "static/css/main.47f3f5ba.css",
     "static/js/main.4677e19a.js"
   ]
 }
