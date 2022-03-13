@@ -19,10 +19,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 96vw;
+  width: 75vw;
   position: absolute;
-  top: 2%;
-  left: 2%;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -10%);
   animation: show 1s forwards;
 
   @keyframes show {
